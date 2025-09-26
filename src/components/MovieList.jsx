@@ -6,8 +6,7 @@ import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 const MovieList = ({ movies }) => {
   return (
     <>
-      <br />
-      <h1 style={{ width: "100%", paddingLeft: "13px", paddingTop:"80px"}}>Movies</h1>
+      <h1 style={{ width: "100%", paddingLeft: "13px", }}>Movies</h1>
       <div className="movie-list">
         {movies.map((movieItem, index) => (
           <MovieCard key={index} movie={movieItem} />
