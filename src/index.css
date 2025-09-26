@@ -179,7 +179,8 @@ p {
     width: 106%;
   }
   .filter-stack input {
-    width: 100%;
+    width: 95%;
+    margin-left: 6px;
   }
 
   .add-movie {
