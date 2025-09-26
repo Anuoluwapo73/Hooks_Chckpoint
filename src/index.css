@@ -13,7 +13,7 @@
   font-variation-settings: "wdth" 100;
 }
 img {
-  width: 297px;
+  width: 100%;
   height: 197px;
 }
 .card > div,
@@ -22,7 +22,7 @@ p {
 }
 /* MovieCard Styling */
 .card {
-  max-width: 300px;
+  /* width: 300px; */
   margin: 15px;
   border: 2px solid black;
   border-radius: 10px;
@@ -32,7 +32,7 @@ p {
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -57,7 +57,7 @@ p {
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 .add-movie h1 {
   background-color: lightgrey;
@@ -145,34 +145,54 @@ p {
 }
 
 /* Responsiveness for mobile */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    
+  }
   .header {
     display: flex;
-    gap: 0;
+    flex-direction: column;
+    gap: 20px;
     margin-bottom: 20px;
   }
   .header-name {
+    padding-left: 10px;
     padding-right: 0;
+  }
+  .header-name h1 {
+    font-size:35px;
+  }
+  .svg {
+    width: 500px;
+    height: 30px;
   }
   .movie-list {
     display: grid;
-    max-width: 100%;
-    grid-template-columns: 315px 315px;
+    width: 100%;
+    gap: 5px;
+    margin-top: 90px;
+    grid-template-columns:  1fr  ;
   }
   .filter-stack {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-left: 35px;
+    margin-bottom: 0px;
+    width: 106%;
   }
   .filter-stack input {
-    width: 245px;
+    width: 100%;
+    
   }
+ 
   .add-movie {
-    margin-left: 230px;
+    width: 100%;
+    margin-left: 25px;
   }
   .add-movie h1 {
-    /* font-size: 30px; */
-    width: 280px;
+   
+    width: 80%;
   }
 }

@@ -3,10 +3,10 @@ import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import Filter from "./Filter";
 
 //Header component
-const Header = ({ setSearch, setRate }) => {
+const Header = () => {
   return (
     <>
-      <div className="header">
+      <div>
         <div className="header-name">
           <FontAwesomeIcon
             icon={faVideo}
@@ -17,10 +17,10 @@ const Header = ({ setSearch, setRate }) => {
               borderRadius: "100%",
               padding: "10px",
             }}
+            className="svg"
           />
           <h1>MovieSpace</h1>
         </div>
-        <Filter setSearch={setSearch} setRate={setRate} />
       </div>
     </>
   );

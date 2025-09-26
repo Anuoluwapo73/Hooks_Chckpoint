@@ -3,6 +3,7 @@ import "./App.css";
 import MovieList from "./components/MovieList";
 import AddMovie from "./components/AddMovie";
 import Header from "./components/Header";
+import Filter from "./components/Filter";
 
 //App COmponent
 function App() {
@@ -103,8 +104,11 @@ function App() {
 
   return (
     <>
-      <div>
-        <Header setSearch={setSearch} setRate={setRate} />
+      <div className="container">
+        <div className="header">
+          <Header/>
+          <Filter setSearch={setSearch} setRate={setRate} />
+        </div>
         {/* <div className="movie-list">
           {filteredMovies.length > 0 ? (
             filteredMovies.map((item, index) => (
