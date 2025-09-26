@@ -104,22 +104,24 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        <div className="header">
-          <Header/>
-          <Filter setSearch={setSearch} setRate={setRate} />
+      <div style={{margin:"0 auto", display:"flex"}}>
+        <div className="container">
+          <div className="header">
+            <Header/>
+            <Filter setSearch={setSearch} setRate={setRate} />
+          </div>
+          {/* <div className="movie-list">
+            {filteredMovies.length > 0 ? (
+              filteredMovies.map((item, index) => (
+                <MovieCard key={index} movie={item} />
+              ))
+            ) : (
+              <p>No movie found...</p>
+            )}
+          </div> */}
+          <MovieList movies={filteredMovies} />
+          <AddMovie movies={movies} setMovies={setMovies} />
         </div>
-        {/* <div className="movie-list">
-          {filteredMovies.length > 0 ? (
-            filteredMovies.map((item, index) => (
-              <MovieCard key={index} movie={item} />
-            ))
-          ) : (
-            <p>No movie found...</p>
-          )}
-        </div> */}
-        <MovieList movies={filteredMovies} />
-        <AddMovie movies={movies} setMovies={setMovies} />
       </div>
     </>
   );

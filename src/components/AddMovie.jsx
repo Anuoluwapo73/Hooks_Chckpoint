@@ -45,6 +45,7 @@ const AddMovie = ({ movies, setMovies }) => {
             <input
               type="file"
               accept="image/*"
+              value={posterURL}
               required
               placeholder="Upload your image here..."
               onChange={handleImage}
@@ -54,6 +55,7 @@ const AddMovie = ({ movies, setMovies }) => {
             <br />
             <input
               type="text"
+              value={title}
               required
               placeholder="Enter your Movie Title..."
               onChange={(e) => setTitle(e.target.value)}
@@ -64,6 +66,7 @@ const AddMovie = ({ movies, setMovies }) => {
             <input
               type="number"
               required
+              value={rating}
               placeholder="Enter your Movie Rating..."
               max={10}
               min={1}
@@ -75,6 +78,7 @@ const AddMovie = ({ movies, setMovies }) => {
             <input
               type="text"
               required
+              value={description}
               placeholder="Enter your Movie Description..."
               maxLength={300}
               onChange={(e) => setDescription(e.target.value)}
