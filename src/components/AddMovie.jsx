@@ -11,7 +11,7 @@ const AddMovie = ({ movies, setMovies }) => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImage(reader.result); // or setThumbnail(reader.result)
+        setPosterURL(reader.result); // or setThumbnail(reader.result)
       };
       reader.readAsDataURL(file);
     }
@@ -19,7 +19,7 @@ const AddMovie = ({ movies, setMovies }) => {
   const handleAdd = () => {
     //Appending new movies
 
-    if (!title || !description || !posterURL || !rating) {
+    if (!title || !description || !posterURL || rating === "") {
       alert("Please fill all fields before adding a movie.");
       return;
     }
@@ -49,7 +49,6 @@ const AddMovie = ({ movies, setMovies }) => {
             <input
               type="file"
               accept="image/*"
-              value={posterURL}
               required
               placeholder="Upload your image here..."
               onChange={handleImage}
