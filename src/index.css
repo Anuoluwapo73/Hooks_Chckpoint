@@ -26,12 +26,19 @@ p {
 /* MovieCard Styling */
 .card {
   /* width: 300px; */
-  margin: 15px;
+  height:89%;
+  margin: 10px 15px 5px 10px;
   border: 2px solid black;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   background-color: hsla(0, 11%, 89%, 0.644);
+}
+.lower-card {
+  display: flex;
+  flex-direction: column;
+  justify-self: space-between;
+  /* align-content: space-between; */
 }
 
 .card img {
@@ -128,6 +135,13 @@ p {
   align-items: center;
   gap: 100px;
 }
+.svg {
+  width: 80px;
+  height: 60px;
+  background-color: white;
+  border-radius: 100%;
+  padding: 10px;
+}
 .header input {
   width: 350px;
   height: 40px;
@@ -149,12 +163,53 @@ p {
   display: flex;
   gap: 30px;
 }
+.watch-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 7px 10px 7px 10px;
+  display: flex;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.watch-btn:active {
+  width: 300px;
+}
+.trailerDisp {
+  font-size: 30px;
+  margin: 30px;
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.trailerDisp iframe{
+  display: flex;
+  margin: 0 auto;
+  width: 80vw;
+  height: 60vh;
+}
+.back {
+  padding: 10px 15px 10px 15px;
+}
 
 /* Responsiveness for mobile */
 @media screen and (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .container {
     width: 100%;
     max-width: 100%;
+  }
+  .header-name {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
   .header {
     display: flex;
@@ -164,11 +219,11 @@ p {
   }
 
   .header-name h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
   .svg {
-    width: 500px;
-    height: 30px;
+    width: 60px;
+    height: 50px;
   }
   .movie-list {
     display: grid;
@@ -208,4 +263,10 @@ p {
   .input-box input {
     width: 87%;
   }
+  .trailerDisp iframe{
+  /* display: flex; */
+  margin: 0;
+  width: 100vw;
+  height: 40vh;
+}
 }

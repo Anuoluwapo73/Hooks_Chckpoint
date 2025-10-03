@@ -6,21 +6,11 @@ import Filter from "./Filter";
 const Header = () => {
   return (
     <>
-      <div>
-        <div className="header-name">
-          <FontAwesomeIcon
-            icon={faVideo}
-            style={{
-              width: "80px",
-              height: "60px",
-              backgroundColor: "white",
-              borderRadius: "100%",
-              padding: "10px",
-            }}
-            className="svg"
-          />
-          <h1>MovieSpace</h1>
+      <div className="header-name">
+        <div>
+          <FontAwesomeIcon icon={faVideo} className="svg" />
         </div>
+        <h1>MovieSpace</h1>
       </div>
     </>
   );

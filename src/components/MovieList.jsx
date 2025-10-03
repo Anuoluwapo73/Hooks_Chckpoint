@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieCard from "./MovieCard";
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
+import { NavLink } from "react-router-dom";
 
-//Movie component
+// Movie component
 const MovieList = ({ movies }) => {
   return (
     <>
-      <h1 style={{ width: "100%", paddingLeft: "13px", }}>Movies</h1>
+      <h1 style={{ width: "100%", paddingLeft: "13px" }}>Movies</h1>
       <div className="movie-list">
-        {movies.map((movieItem, index) => (
-          <MovieCard key={index} movie={movieItem} />
+        {movies.map((movieItem) => (
+          <div
+            key={movieItem.id}
+            to={`/movies/${movieItem.title
+              .trim()
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
+          >
+            <MovieCard movie={movieItem} />
+          </div>
         ))}
       </div>
     </>
