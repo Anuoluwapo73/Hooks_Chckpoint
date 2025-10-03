@@ -9,7 +9,11 @@ const AddMovie = ({ movies, setMovies }) => {
   const handleImage = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setPosterURL(URL.createObjectURL(file));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result); // or setThumbnail(reader.result)
+      };
+      reader.readAsDataURL(file);
     }
   };
   const handleAdd = () => {
